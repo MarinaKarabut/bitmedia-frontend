@@ -15,7 +15,6 @@ const UsersPage = () => {
     const allUsers = useSelector(state => state.users.users, shallowEqual)
 
     const [page, setPage] = useState(1)
-    // console.log(page);
 
     const dispatch = useDispatch()
 
