@@ -1,0 +1,32 @@
+@import "src/shared/styles/base";
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #f1f1f1;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.itemActive {
+  composes: item;
+  background-color: $accent-color;
+  color: $white-color;
+  border: 2px solid $accent-color;
+}
+
+.arrow {
+  cursor: pointer;
+  margin: 12px 24px 0 24px;
+}

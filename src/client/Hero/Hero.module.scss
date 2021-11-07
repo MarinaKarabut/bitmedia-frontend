@@ -1,0 +1,42 @@
+@import "src/shared/styles/base";
+@import "src/shared/styles/common";
+
+.hero {
+  padding-top: 121px;
+  padding-bottom: 22px;
+  background-image: url(../../images/hero/hero.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+
+  &__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.23;
+    color: $white-color;
+    margin-bottom: 24px;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $white-color;
+    margin-bottom: 32px;
+  }
+}
+
+.title__accent {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.23;
+  color: $white-color;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 586px 1fr;
+  gap: 220px;
+  padding-left: 130px;
+  padding-right: 130px;
+  margin: 0 auto;
+}

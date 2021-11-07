@@ -1,0 +1,7 @@
+@import "src/shared/styles/common";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  gap: 20px;
+}

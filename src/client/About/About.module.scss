@@ -1,0 +1,29 @@
+@import "src/shared/styles/base";
+@import "src/shared/styles/common";
+
+.section {
+  &__about {
+    padding-top: 22px;
+    padding-bottom: 128px;
+    padding-left: 130px;
+    padding-right: 130px;
+    &__title {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 1.22;
+      text-align: center;
+      color: $secondary-text-color;
+      margin-bottom: 24px;
+      &__accent {
+        font-weight: 700;
+      }
+    }
+    &__description {
+      font-size: 20px;
+      line-height: 1.4;
+      text-align: center;
+      color: $primary-text-color;
+      margin-bottom: 40px;
+    }
+  }
+}

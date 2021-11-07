@@ -1,0 +1,55 @@
+@import "src/shared/styles/base";
+
+.table {
+  width: 1180px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.thead th {
+  padding-bottom: 14px;
+  padding-top: 14px;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #1a1a1a;
+  color: $white-color;
+  text-align: start;
+  background-color: $accent-color;
+  &:first-child {
+    text-align: center;
+    padding-right: 24px;
+  }
+}
+
+td {
+  text-align: start;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 24px;
+  &:not(:last-child) {
+    border-right: 1px solid $white-color;
+  }
+  &:first-child {
+    text-align: center;
+    padding-left: 27px;
+    padding-right: 26px;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) {
+  background-color: #fbfbfb;
+}
+
+.link {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #1a1a1a;
+  text-decoration: none;
+}

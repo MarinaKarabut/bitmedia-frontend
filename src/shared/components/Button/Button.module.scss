@@ -1,0 +1,15 @@
+@import "src/shared/styles/base";
+
+.btn {
+  background-color: $white-color;
+  border-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 154px;
+  padding: 17px 32px 16px 31px;
+  color: $accent-color;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.44;
+  text-decoration: none;
+}

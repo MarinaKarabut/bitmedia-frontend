@@ -1,0 +1,33 @@
+@import "src/shared/styles/base";
+
+.header {
+  position: static;
+  background-color: $accent-color;
+  padding-top: 10px;
+  padding-bottom: 13px;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.name {
+  position: relative;
+  margin-top: 16px;
+  margin-left: 20px;
+  color: $accent-color;
+  padding-left: 20px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 10px;
+    left: 0;
+    top: 10%;
+    // transform: translateY(-100%);
+    background-image: url(../../../images/nav/arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

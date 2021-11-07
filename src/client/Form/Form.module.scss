@@ -1,0 +1,19 @@
+@import "src/shared/styles/base";
+
+.form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  width: 176px;
+  left: 50%;
+  top: 3px;
+  transform: translateX(68%);
+
+  background: $accent-color;
+  color: $white-color;
+}

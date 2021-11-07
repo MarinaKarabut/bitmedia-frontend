@@ -1,0 +1,42 @@
+@import "src/shared/styles/fonts";
+@import "src/shared/styles/base";
+
+body {
+  margin: 0;
+  font-family: Montserrat sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+nav,
+input {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}

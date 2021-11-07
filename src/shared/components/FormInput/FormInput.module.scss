@@ -1,0 +1,23 @@
+@import "src/shared/styles/_base";
+
+.input {
+  width: 579px;
+  height: 64px;
+  background: $white-color;
+  border: 1px solid #f1f1f1;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.04em;
+  color: #000000;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 19px;
+  &::placeholder {
+    color: #b9b9b9;
+  }
+}
+
+.formGroup {
+  @include flex(center, flex-start);
+  flex-direction: column;
+}
