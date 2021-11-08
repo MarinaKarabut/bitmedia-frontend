@@ -1,9 +1,4 @@
-import { useParams } from "react-router-dom"
-import { useEffect } from 'react';
-import { useDispatch, shallowEqual, useSelector } from 'react-redux';
-
-
-import { getOneUser } from '../../../redux/users/users-operations';
+import { shallowEqual, useSelector } from 'react-redux';
 
 
 import Footer from '../../Footer';
@@ -14,15 +9,6 @@ import Chart from '../../Chart'
 import s from "./OneUserPage.module.scss"
 
 const OneUserPage = () => {
-    const { id } = useParams()
-
-    const dispatch = useDispatch()
-    
-    useEffect(() => {
-        dispatch(getOneUser(id))
-    }, [dispatch, id]);
-  
-    
     const userInfo = useSelector(state => state.users.user, shallowEqual);
 
     const { firstName, lastName } = userInfo

@@ -20,14 +20,14 @@
       fill: #cccccc;
     }
     &:not(:last-child) {
-      margin-right: 10px;
+      margin-right: 8px;
       @include tablet {
         margin-right: 20px;
       }
     }
 
     &__item {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.25;
       color: #cccccc;
       text-decoration: none;
@@ -39,6 +39,7 @@
 }
 
 .active {
+  composes: nav__link__item;
   color: $accent-color;
   text-decoration: none;
 }

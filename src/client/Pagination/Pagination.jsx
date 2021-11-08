@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 import { v4 } from 'uuid'
 
 import { ReactComponent as ArrowRight } from '../../images/pagination/arrowR.svg';
@@ -31,3 +33,17 @@ const Pagination = ({ currentPage, showPage, showNextPage, limit = 50 }) => {
 }
 
 export default Pagination;
+
+Pagination.defaultProps = {
+    currentPage: null,
+    showPage: () => { },
+    showNextPage: () => { },
+}
+
+
+Pagination.propTypes = {
+    currentPage: PropTypes.number,
+    limit: PropTypes.number,
+    showPage: PropTypes.func,
+    showNextPage: PropTypes.func,
+}

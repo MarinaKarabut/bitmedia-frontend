@@ -22,11 +22,11 @@ export const getAllUsers = (page) => async (dispatch) => {
   }
 }
 
-export const getOneUser = (id) => async (dispatch) => {
+export const getOneUser = (id, start, end) => async (dispatch) => {
   dispatch(getOneUserRequest())
 
   try {
-    const { data } = await axios.get(`/stats/${id}`)
+    const { data } = await axios.get(`/stats/${id}?start=${start}&end=${end}`)
 
     dispatch(getOneUserSuccess(data))
   } catch (error) {

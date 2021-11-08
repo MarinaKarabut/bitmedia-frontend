@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { v4 } from 'uuid'
 import {Link} from 'react-router-dom'
 
@@ -42,3 +43,23 @@ function Table({ users }) {
 };
 
 export default Table;
+
+Table.defaultProps = {
+    users:[]
+
+}
+
+
+Table.propTypes = {
+    users: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        first_name: PropTypes.string,
+        last_name: PropTypes.string,
+        email: PropTypes.string,
+        gender: PropTypes.string,
+        ip_address: PropTypes.string,
+        total_clicks: PropTypes.number,
+        total_page_views: PropTypes.number   
+}))
+}
+

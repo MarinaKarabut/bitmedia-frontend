@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 
 import s from './AboutItem.module.scss'
 
@@ -13,3 +13,16 @@ const AboutItem = ({ title, description, image }) => {
 };
 
 export default AboutItem;
+
+AboutItem.defaultProps = {
+    title: '',
+    description: '',
+    image: '',
+}
+
+
+AboutItem.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    image: PropTypes.string,
+}

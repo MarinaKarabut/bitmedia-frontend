@@ -1,29 +1,47 @@
 import React, { useState, useCallback } from 'react';
+import { useParams } from "react-router-dom"
+import { useEffect } from 'react';
+import { useDispatch} from 'react-redux';
+import { getOneUser } from '../../redux/users/users-operations'
+
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'
 
 import s from './CalendarComponent.module.scss'
 
-const  CalendarComponent= () => {
+const CalendarComponent = () => {
   const [value, setValue] = useState([
-    new Date(2019, 10, 17),
-    new Date(2019, 10, 23),
+    new Date(2019, 9, 17),
+    new Date(2019, 9, 23),
   ]);
-  console.log(value);
+ 
+
+  const start =value[0].toJSON().slice(0,10)
+  const end = value[1].toJSON().slice(0, 10)
 
   const [openCalendar, setOpenCalendar] = useState(false)
     
-    const toggle = () => {
-    setOpenCalendar(!openCalendar)
-    }
     
-  
 
   const onChange = useCallback((value) => {
       setValue(value);
     },
     [setValue],
   );
+
+  const { id } = useParams()
+
+  const dispatch = useDispatch()
+
+  const toggle = () => {
+      setOpenCalendar(!openCalendar)
+    }
+    
+    
+    useEffect(() => {
+      dispatch(getOneUser(id, start, end))
+    }, [dispatch,id, start, end]);
+  
 
   return (
     <div>
@@ -47,7 +65,7 @@ const  CalendarComponent= () => {
           value={value}
           selectRange={true}
           className={s.calendar}
-          // formatDay={true}
+          locale="en-En"
         />
       </div>}
     </div>

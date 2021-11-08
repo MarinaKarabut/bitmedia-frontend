@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types'
 import  CalendarComponent from '../CalendarComponent'
 
 import {
@@ -16,7 +16,7 @@ import s from './Chart.module.scss'
 
 const Chart = ({ userInfo }) => {
 
-    const { firstName, lastName, user } = userInfo
+    const { firstName, lastName, days } = userInfo
 
     
     return (
@@ -32,7 +32,7 @@ const Chart = ({ userInfo }) => {
                 <LineChart
                     width={1200}
                     height={249}
-                    data={user}
+                    data={days}
                     margin={{
                         top:9,
                         right: 30,
@@ -73,7 +73,7 @@ const Chart = ({ userInfo }) => {
                 <LineChart
                     width={1200}
                     height={249}
-                    data={user}
+                    data={days}
                     margin={{
                         top:5,
                         right: 30,
@@ -108,3 +108,19 @@ const Chart = ({ userInfo }) => {
   )
 }
 export default Chart
+
+Chart.defaultProps = {
+    userInfo: {},
+}
+
+
+Chart.propTypes = {
+        firstName: PropTypes.string,
+        lastName: PropTypes.string,
+        days: PropTypes.arrayOf(PropTypes.shape({
+            id: PropTypes.number,
+            clicks: PropTypes.number,
+            page_views: PropTypes.number,
+            date: PropTypes.string
+        }))
+}
