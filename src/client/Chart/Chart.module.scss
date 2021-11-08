@@ -9,3 +9,11 @@
   max-width: 100%;
   overflow-x: scroll;
 }
+
+.wrapper {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

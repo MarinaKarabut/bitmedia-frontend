@@ -36,7 +36,6 @@ const OneUserPage = () => {
                 <Navigation />
                 <p className={ s.name }>{firstName} {lastName}</p>
             </div>
-            
             <Chart userInfo={ userInfo }/>
             <Footer/>
         </>

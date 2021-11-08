@@ -1,4 +1,5 @@
-import React from 'react';
+
+import  CalendarComponent from '../CalendarComponent'
 
 import {
     LineChart,
@@ -16,12 +17,17 @@ import s from './Chart.module.scss'
 const Chart = ({ userInfo }) => {
 
     const { firstName, lastName, user } = userInfo
+
     
-  
     return (
         <section className={`${s.section} ${s.section__charts}`}>
-            <h2 className={s.section__title}>{firstName} {lastName}</h2>
+            <div className={s.wrapper}>
+                <h2 className={s.section__title}>{firstName} {lastName}</h2>
+                <CalendarComponent/>
+            </div>
+            
             <h3 className={s.section__subtitle}>Clicks</h3>
+                
             <div className={s.chart__container}>
                 <LineChart
                     width={1200}
