@@ -9,11 +9,23 @@
 
 .btn {
   position: absolute;
-  width: 176px;
+  width: 96px;
   left: 50%;
   top: 3px;
-  transform: translateX(68%);
+  transform: translateX(44%);
 
   background: $accent-color;
   color: $white-color;
+
+  @include tablet {
+    width: 126px;
+    transform: translateX(96%);
+  }
+
+  @include desktop {
+    width: 176px;
+    padding: 17px 48px 16px 48px;
+    top: 4px;
+    transform: translateX(68%);
+  }
 }

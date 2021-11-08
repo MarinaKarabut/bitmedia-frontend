@@ -1,15 +1,29 @@
 @import "src/shared/styles/base";
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 114px;
+  padding: 8px 20px 8px 20px;
+  font-size: 14px;
+  line-height: 1.44;
+  color: $accent-color;
+  text-align: center;
   background-color: $white-color;
   border-color: transparent;
   border-radius: 8px;
   cursor: pointer;
-  width: 154px;
-  padding: 17px 32px 16px 31px;
-  color: $accent-color;
-  text-align: center;
-  font-size: 16px;
-  line-height: 1.44;
   text-decoration: none;
+  @include tablet {
+    width: 154px;
+    padding: 12px 29px 12px 27px;
+    font-size: 16px;
+  }
+  @include desktop {
+    justify-content: flex-start;
+    padding: 17px 32px 16px 31px;
+    margin: 0;
+  }
 }

@@ -1,11 +1,5 @@
 @import "src/shared/styles/base";
-
-.header {
-  position: static;
-  background-color: $accent-color;
-  padding-top: 10px;
-  padding-bottom: 13px;
-}
+@import "src/shared/styles/common";
 
 .wrapper {
   display: flex;
@@ -15,6 +9,8 @@
   position: relative;
   margin-top: 16px;
   margin-left: 20px;
+  font-size: 14px;
+  line-height: 1.25;
   color: $accent-color;
   padding-left: 20px;
   &::before {
@@ -24,10 +20,12 @@
     height: 10px;
     left: 0;
     top: 10%;
-    // transform: translateY(-100%);
     background-image: url(../../../images/nav/arrow.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  @include tablet {
+    font-size: 16px;
   }
 }

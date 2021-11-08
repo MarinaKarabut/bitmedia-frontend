@@ -16,8 +16,9 @@ function Table({ users }) {
             <td><Link to={`/user/${id}`} className={s.link}>{total_page_views}</Link></td>
         </tr >))
     return (
-        <section className ="transactions">
-            <table className={s.table}>
+        <section className="transactions">
+            <div className={s.table__container}>
+             <table className={s.table}>
                 <thead className={s.thead}>
                     <tr>
                         <th>Id</th>
@@ -33,7 +34,9 @@ function Table({ users }) {
                 <tbody className={s.tbody}>
                     {tableEl}
                 </tbody>
-            </table>
+            </table>   
+            </div>
+            
         </section>
     )
 };

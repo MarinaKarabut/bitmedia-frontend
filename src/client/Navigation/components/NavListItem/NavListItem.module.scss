@@ -20,12 +20,20 @@
       fill: #cccccc;
     }
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 10px;
+      @include tablet {
+        margin-right: 20px;
+      }
     }
 
     &__item {
+      font-size: 14px;
+      line-height: 1.25;
       color: #cccccc;
       text-decoration: none;
+      @include tablet {
+        font-size: 16px;
+      }
     }
   }
 }

@@ -1,7 +1,15 @@
 @import "src/shared/styles/common";
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(3, 380px);
-  gap: 20px;
+  max-width: 280px;
+  margin: 0 auto;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 310px);
+    gap: 20px;
+    margin: 0;
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 380px);
+  }
 }

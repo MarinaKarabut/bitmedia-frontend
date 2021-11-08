@@ -1,12 +1,19 @@
 @import "src/shared/styles/base";
 
 .table {
-  width: 1180px;
+  &__container {
+    max-width: 100%;
+    overflow-x: scroll;
+  }
+  width: 320px;
   margin: 0 auto;
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 24px;
+  @include tablet {
+    width: 1180px;
+  }
 }
 .thead th {
   padding-bottom: 14px;
@@ -14,7 +21,6 @@
   padding-left: 24px;
   font-size: 16px;
   line-height: 1.25;
-  color: #1a1a1a;
   color: $white-color;
   text-align: start;
   background-color: $accent-color;
@@ -50,6 +56,6 @@ tr:nth-child(odd) {
 .link {
   font-size: 16px;
   line-height: 1.25;
-  color: #1a1a1a;
+  color: $secondary-text-color;
   text-decoration: none;
 }

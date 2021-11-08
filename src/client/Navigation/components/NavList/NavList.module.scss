@@ -1,8 +1,16 @@
+@import "src/shared/styles/base";
+
 .nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 24px;
   margin-top: 16px;
-  padding-left: 130px;
+  padding-left: 10px;
+  @include tablet {
+    padding-left: 60px;
+  }
+  @include desktop {
+    padding-left: 130px;
+  }
 }

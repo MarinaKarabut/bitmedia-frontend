@@ -7,16 +7,25 @@
 }
 
 .item {
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   border: 2px solid #f1f1f1;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   margin: 0 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+  @include tablet {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+  @include desktop {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .itemActive {
@@ -27,6 +36,18 @@
 }
 
 .arrow {
+  width: 10px;
+  height: 22px;
+  margin: 6px 14px 0 14px;
   cursor: pointer;
-  margin: 12px 24px 0 24px;
+  @include tablet {
+    width: 12px;
+    height: 24px;
+    margin: 10px 24px 0 24px;
+  }
+  @include desktop {
+    width: 17px;
+    height: 28px;
+    margin: 12px 24px 0 24px;
+  }
 }

@@ -1,21 +1,2 @@
 @import "src/shared/styles/base";
-
-.header {
-  position: static;
-  background-color: $accent-color;
-  padding-top: 10px;
-  padding-bottom: 13px;
-}
-
-.title {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1.22;
-  color: #1a1a1a;
-  margin-bottom: 16px;
-}
-
-.section {
-  padding-left: 130px;
-  padding-right: 130px;
-}
+@import "src/shared/styles/common";

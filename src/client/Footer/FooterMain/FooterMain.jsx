@@ -7,10 +7,10 @@ const FooterMain = () => {
     return (
         <footer className={s.footer}>
             <Form/>
-            <div className={s.wrapper}>
-                <Logo className={s.logo} />
-                <p className={s.text}>All rights reserved by ThemeTags</p>
-                <p className={s.text}>Copyrights &copy; 2019.</p>
+            <div className={s.footer__wrapper}>
+                <Logo className={s.footer__logo} />
+                <p className={s.footer__text}>All rights reserved by ThemeTags</p>
+                <p className={s.footer__text}>Copyrights &copy; 2019.</p>
             </div>      
         </footer>
     )

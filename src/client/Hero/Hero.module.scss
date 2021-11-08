@@ -2,41 +2,60 @@
 @import "src/shared/styles/common";
 
 .hero {
-  padding-top: 121px;
-  padding-bottom: 22px;
+  padding-top: 38px;
+  padding-bottom: 58px;
   background-image: url(../../images/hero/hero.png);
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 40%;
   background-size: cover;
+  @include tablet {
+    padding-top: 36px;
+    padding-bottom: 64px;
+    background-position: 100%;
+  }
+  @include desktop {
+    padding-top: 38px;
+    padding-bottom: 58px;
+  }
 
   &__title {
     font-weight: 400;
-    font-size: 48px;
+    font-size: 28px;
     line-height: 1.23;
+    text-align: center;
     color: $white-color;
     margin-bottom: 24px;
+    @include tablet {
+      font-size: 38px;
+    }
+    @include desktop {
+      font-size: 48px;
+      text-align: start;
+    }
+    &__accent {
+      font-weight: 700;
+    }
   }
   &__description {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.4;
     color: $white-color;
     margin-bottom: 32px;
+    @include desktop {
+      text-align: start;
+    }
   }
-}
-
-.title__accent {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 1.23;
-  color: $white-color;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 586px 1fr;
-  gap: 220px;
-  padding-left: 130px;
-  padding-right: 130px;
-  margin: 0 auto;
+  @include desktop {
+    display: grid;
+    grid-template-columns: 580px 1fr;
+    gap: 220px;
+  }
+}
+
+.img {
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }

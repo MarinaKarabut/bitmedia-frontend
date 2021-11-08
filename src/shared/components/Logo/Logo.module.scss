@@ -1,10 +1,18 @@
 @import "src/shared/styles/base";
 
 .logo {
-  font-size: 40px;
+  font-size: 20px;
   line-height: 1.22;
   color: $white-color;
   text-decoration: none;
+  padding-left: 10px;
 
-  margin-left: 130px;
+  @include tablet {
+    font-size: 35px;
+    padding-left: 60px;
+  }
+  @include desktop {
+    font-size: 40px;
+    padding-left: 130px;
+  }
 }

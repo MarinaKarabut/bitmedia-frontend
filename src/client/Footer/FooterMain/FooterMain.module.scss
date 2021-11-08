@@ -1,31 +1,13 @@
 @import "src/shared/styles/base";
-
-.logo {
-  font-size: 32px;
-  line-height: 1.22;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 130px;
-  padding-top: 24px;
-  padding-bottom: 30px;
-}
+@import "src/shared/styles/common";
 
 .footer {
   padding-top: 26px;
   background-image: url(../../../images/footer/footerBg.png);
   background-repeat: no-repeat;
-  background-position: 100%;
-  background-size: cover;
-}
-
-.text {
-  font-size: 16px;
-  line-height: 1.44;
-
-  text-align: center;
-  color: $white-color;
+  background-position: 80%;
+  @include tablet {
+    background-position: 100%;
+    background-size: cover;
+  }
 }

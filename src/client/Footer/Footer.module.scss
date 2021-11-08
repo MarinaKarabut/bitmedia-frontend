@@ -1,27 +1,6 @@
 @import "src/shared/styles/base";
-
-.logo {
-  font-size: 24px;
-  line-height: 1.21;
-}
-
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 130px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-}
+@import "src/shared/styles/common";
 
 .footer {
   background-color: $footer-background-color;
-}
-
-.text {
-  font-size: 16px;
-  line-height: 1.44;
-
-  text-align: center;
-  color: $white-color;
 }

@@ -40,7 +40,7 @@ const UsersPage = () => {
             <Header className={s.header} />
             <Navigation />
             <section className={s.section}>
-                <h2 className ={s.title}>Users statistics</h2>
+                <h2 className ={s.section__title}>Users statistics</h2>
                 <Table users={allUsers} />
                 <Pagination currentPage={page} showPage={loadNewPage} showNextPage={loadNextPage} />
             </section>
