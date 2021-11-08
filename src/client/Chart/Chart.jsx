@@ -1,12 +1,26 @@
+import React from 'react';
+
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    Tooltip,
+    CartesianGrid,
 } from "recharts";
 
 import s from './Chart.module.scss'
+
+class CustomizedDot extends React.Component {
+    render() {
+
+        return (
+            <circle cx={16} cy={16} r={8} stroke="#3A80BA" strokeWidth={3} fill="#3A80BA" />
+        );
+    }
+};
+
+
 
 const Chart = ({ userInfo }) => {
 
@@ -19,40 +33,66 @@ const Chart = ({ userInfo }) => {
             <h3 className={s.subtitle}>Clicks</h3>
             <LineChart
                 width={1200}
-                height={300}
+                height={249}
                 data={user}
                 margin={{
-                    top: 5,
+                    top:9,
                     right: 30,
-                    left: 20,
-                    bottom: 5,
+                    bottom: 20,
                 }}
             >
-            <XAxis dataKey="date" />
-            <YAxis />
-            <Tooltip />
+            <CartesianGrid 
+                vertical={false}
+                stroke="#F1F1F1"
+          />
+                <XAxis
+                    dataKey="date"
+                    stroke="#cccccc"
+                    axisLine={false}
+                    tickLine={false} />
+            <YAxis
+                    type="number"
+                    domain={['dataMin', 'dataMax']}
+                    ticks={[0, 200, 400, 600, 800, 1000]}
+                    stroke="#cccccc"
+                    axisLine={false}
+                    tickLine={false}
+    
+                />
+                <Tooltip />
+                <CustomizedDot />
             <Line
                     type="monotone"
                     dataKey="clicks"
                     stroke="#3A80BA"
                     dot={false}
                     activeDot={{ r: 8 }}
+                    strokeWidth={4}
             />
             </LineChart>
             <h3 className={s.subtitle}>Views</h3>
             <LineChart
             width={1200}
-            height={300}
+            height={249}
             data={user}
-            margin={{
-                top: 5,
+                margin={{
+                top:5,
                 right: 30,
-                left: 20,
-                bottom: 5
             }}
             >
-            <XAxis dataKey="date" />
-            <YAxis />
+            <CartesianGrid 
+                vertical={false}
+                stroke="#F1F1F1"
+          />
+            <XAxis dataKey="date" stroke="#cccccc" axisLine={false} tickLine={false}/>
+                <YAxis
+                    type="number"
+                    domain={['dataMin', 'dataMax']}
+                    ticks={[0, 200, 400, 600, 800, 1000]}
+                    stroke="#cccccc"
+                    axisLine={false}
+                    tickLine={false}
+                />
             <Tooltip />
             <Line
                 type="monotone"
@@ -60,6 +100,7 @@ const Chart = ({ userInfo }) => {
                 stroke="#3A80BA"
                 dot={false}
                 activeDot={{ r: 8 }}
+                strokeWidth={4}
             />
             </LineChart>
 
